@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CPEN322 Project</title>
+    <script src="app.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id = "app-view">
+      <ul id = "app-menu">
+        <li class = "menu-item">
+          <a href = "#/"><img alt="room" src = "/assets/chat-icon.png"/> Rooms</a>
+        </li>
+        <li class = "menu-item">
+          <a href = "#/profile"><img alt="profile" src = "/assets/profile-icon.png"/> Profile</a>
+        </li>
+      </ul>
+      <div id = "page-view">
+        <div class = "content">
+          <ul class = "room-list">
+            <li>
+              <a href = "#/chat"><img alt="chat" src = "/assets/everyone-icon.png"/><span>Everyone in CPEN322</span></a>
+            </li>
+            <li>
+              <a href = "#/chat"><img alt="chat" src = "/assets/bibimbap.jpg"/><span>Foodies only</span></a>
+            </li>
+            <li>
+              <a href = "#/chat"><img alt="chat" src = "/assets/minecraft.jpg"/><span>Gamers unite</span></a>
+            </li>
+            <li>
+              <a href = "#/chat"><img alt="chat" src = "/assets/canucks.png"/><span>Canucks fan</span></a>
+            </li>
+          </ul>
+          <div class = "page-control">
+            <input type="text" placeholder="Room title"/>
+            <button>Create Room</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

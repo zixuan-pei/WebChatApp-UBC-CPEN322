@@ -1,0 +1,10 @@
+{
+	"dependencies": {
+		"express": "^4.17.1",
+		"ws": "^8.2.3"
+	},
+	"devDependencies": {
+		"mongodb": "^4.2.0",
+		"nodemon": "^2.0.15"
+	}
+}

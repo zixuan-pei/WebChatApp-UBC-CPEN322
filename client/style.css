@@ -1,0 +1,250 @@
+body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+a {text-decoration: none;}
+
+a:link {text-decoration: none;}
+a:visited {text-decoration:none}
+a:hover {text-decoration:none}
+a:active {text-decoration:none}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,li {list-style:none;}
+
+#app-menu {
+    background-color: #6666ff;
+    column-count: 2;
+    column-gap: 0;
+    height: 50px;
+    text-align: center;
+}
+#app-menu > li {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.menu-item {
+    display: block;
+}
+
+#app-menu a {
+    display: block;
+    color: #ffffff;
+}
+
+#app-menu img {
+    filter: invert(100%);
+}
+
+#app-menu img, #profile-form-avatar img{
+    width: 22px;
+    height: 22px;
+    position: relative;
+    bottom: -5px;
+}
+
+.room-list > li {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #888888;
+}
+
+.room-list > li > a {
+    display: block;
+    color: #000000;
+}
+
+.room-list > li > a > img {
+    border-radius:50%;
+    position: relative;
+    bottom: -5px;
+    margin-left: 18px;
+    width: 22px;
+    height: 22px;
+}
+
+.room-list > li > a > span {
+    padding-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    #app-view{
+        width: 80%;
+    }
+    .message-list {
+        width: 80%;
+    }
+    .room-list {
+        width: 80%;
+    }
+    .page-control {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #app-view{
+        width: 90%;
+    }
+    .message-list {
+        width: 90%;
+    }
+    .room-list {
+        width: 90%;
+    }
+    .page-control {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #app-view{
+        width: 100%;
+    }
+    .message-list {
+        width: 100%;
+    }
+    .room-list {
+        width: 100%;
+    }
+    .page-control {
+        width: 100%;
+    }
+}
+
+.message-list {
+    position: absolute;
+    height: calc(100% - 115px);
+    overflow: auto;
+}
+
+.room-list {
+    position: absolute;
+    height: calc(100% - 90px);
+    overflow: auto;
+}
+
+.page-control {
+    background-color: #6666ff;
+    position: absolute;
+    bottom: 0;
+    line-height: 35px;
+    height: 40px;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.room-list li {
+    background-color: #eaeaea;
+}
+
+#app-menu li:hover {
+    background-color: #9999ff;
+}
+
+#app-menu li:hover a {
+    color: #ffff00;
+}
+
+#app-menu li:hover img {
+    filter: invert(70%);
+}
+
+.room-list li:hover {
+    background-color: #dcdcff;
+}
+
+.page-control > textarea {
+    resize: none;
+    text-indent: 6px;
+    overflow: hidden;
+    font-size: 16px;
+    font-family: Helvetica, serif;
+    width: 80%;
+    height: 24px;
+    line-height: 24px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+label, input {
+    vertical-align: middle;
+}
+
+#profile-form-username, #profile-form-password, #profile-form-avatar {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #888888;
+}
+
+#profile-form-about {
+    height: 160px;
+    border-bottom: 1px solid #888888;
+}
+
+.form-field label {
+    position:relative;
+    display:inline-block;
+    margin-left: 20px;
+    width: 135px;
+}
+
+.form-field textarea {
+    position:relative;
+    width: 50%;
+    height: 90%;
+    top: 5%;
+    margin-left: 3px;
+}
+
+.message-list {
+    display: block;
+    /*position: relative;*/
+}
+
+.message {
+    width: fit-content;
+    max-width: 60%;
+    margin-right: auto;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 6px;
+    padding: 4px 10px 4px 10px;
+    background-color: #eaeaea;
+}
+
+.my-message {
+    width: fit-content;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: 10px;
+    border-radius: 6px;
+    padding: 4px 10px 4px 10px;
+    background-color: #9999ff;
+}
+
+.message-list span {
+    display: block;
+}
+
+.my-message > .message-user {
+    text-align:right;
+}
+
+.message-user {
+    font-weight: bold;
+}
+
+.message-text {
+    max-width: 100%;
+}
