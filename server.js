@@ -34,7 +34,7 @@ const host = 'localhost';
 const port = 3000;
 const clientApp = path.join(__dirname, 'client');
 const broker = new ws.Server({port: 8000});
-const db = new Database("mongodb://localhost:27017", "cpen322-messenger");
+const db = new Database("mongodb+srv://instance-0:924799@cluster0.xuiqx.mongodb.net", "cpen322-messenger");
 const sessionManager = new SessionManager();
 
 let messages = {};
@@ -160,13 +160,13 @@ app.route('/chat/:room_id/messages').get(sessionManager.middleware, (req, res) =
 
 app.route('/login').post((req, res) => {
 	db.getUser(req.body.username).then(user => {
-		if (!user) res.redirect('/login').send();
+		if (!user) res.redirect('/login');
 		else {
 			if (isCorrectPassword(req.body.password, user.password)) {
 				sessionManager.createSession(res, user.username, 600000);
-				res.redirect('/').send();
+				res.redirect('/');
 			}
-			else res.redirect('/login').send();
+			else res.redirect('/login');
 		}
 	}, err => {
 		console.log(err);
@@ -179,7 +179,7 @@ app.route('/profile').get(sessionManager.middleware, (req, res) => {
 
 app.route('/logout').get(sessionManager.middleware, (req, res) => {
 	sessionManager.deleteSession(req);
-	res.redirect('/login').send();
+	res.redirect('/login');
 });
 
 // serve static files (client-side)
@@ -196,5 +196,4 @@ app.use((err, req, res, next) => {
 			res.redirect('/login').send();
 	} else res.status(500).send();
 });
-
 
